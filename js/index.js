@@ -20,4 +20,14 @@ const pickUserHand = (hand) => {
   //set the user pickUserHand
 
   document.getElementById("userPickImage").src = handOption[hand];
+  pickComputerHand();
+};
+
+const pickComputerHand = () => {
+  let hands = ["rock", "paper", "scissors"];
+  let cpHand = hands[Math.floor(Math.random() * 3)];
+
+  document.getElementById("computerPickImage").src = handOption[cpHand];
+
+  return cpHand;
 };
